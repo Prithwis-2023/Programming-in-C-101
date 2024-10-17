@@ -44,6 +44,8 @@ void bubbleSort (int arr[], int right)
         return;
     }
 
+    int swapped = 0;
+
     for (int i = 0; i < right - 1; i++)
     {
         if (arr[i] > arr[i+1])
@@ -53,9 +55,15 @@ void bubbleSort (int arr[], int right)
             arr[i] = arr[i + 1];
 
             arr[i + 1] = temp;
+
+            swapped = 1;
         }
     }
 
+    if (!swapped)
+    {
+        return;
+    }
     bubbleSort(arr, right - 1);
 
 }

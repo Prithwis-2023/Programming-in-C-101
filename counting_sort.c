@@ -79,8 +79,12 @@ int main (int argc, char *argv[])
 
     for (int i = 0; i < size; i++)
     {
-        printf("%i ", output[i]);
+        printf("%i ", nums[i]);
     }
+
+    free(output);
+
+    free(nums);
 }
 
 int count_occurences(int arr[], int size, int n)

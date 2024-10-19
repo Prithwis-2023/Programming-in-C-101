@@ -26,6 +26,8 @@ int main (int argc, char *argv[])
 
     for (int i = 0; i < size; i++) {printf("%i ", nums[i]);};
 
+    free(nums);
+
 }
 
 void ShellSort(int arr[], int n)
